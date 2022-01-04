@@ -61,6 +61,7 @@ img {
   max-width: 1200px;
   width: 80%;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 .text-center {
   text-align: center;
@@ -234,11 +235,14 @@ img {
 }
 
 @media (max-width: 991.98px) {
-  .md-none {
-    display: none;
+  .logo-link .logo {
+    max-width: 120px;
+  }
+  .nav-list-link {
+    font-size: 1.6rem;
   }
   .nav-list-btn {
-    font-size: 2rem;
+    font-size: 1.6rem;
     padding: 1px 4px;
   }
 }
@@ -265,11 +269,19 @@ img {
       url("./../../images/banner-small.png");
   }
 
-  .logo-link .logo {
-    max-width: 150px;
+  .logo-container {
+    top: 3.6rem;
   }
   .nav {
+    align-items: flex-end;
+    height: 70px;
     padding: 0 1rem;
+  }
+  .nav-list-item {
+    margin-right: 0.5rem;
+  }
+  .logo-link .logo {
+    max-width: 100px;
   }
 
   .hero {
@@ -298,16 +310,8 @@ img {
       ),
       url("./../../images/banner-xs.png");
   }
-  .logo-link .logo {
-    max-width: 120px;
-  }
 }
 
-@media (max-width: 380.98px) {
-  .nav-list {
-    display: none;
-  }
-}
 /* ----------- End Styling for Header -------------- */
 
 /* ----------- Start Styling for Series Section -------------- */
@@ -717,7 +721,8 @@ img {
 
 .ag-format-container {
   position: relative;
-  padding-top: 7rem;
+  padding: 7rem 0;
+  overflow: hidden;
 }
 
 .ag-timeline_item {
@@ -967,12 +972,32 @@ img {
   }
 }
 
+@media (max-width: 767.98px) {
+  .mt-sm_item {
+    margin-top: 7rem;
+  }
+
+  .ag-timeline_list {
+    padding-right: 2rem;
+  }
+}
+
 @media (max-width: 639px) {
   .ag-timeline-card_info {
     padding: 10px 15px;
   }
   .ag-timeline-card_desc {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 409.98px) {
+  .mt-sm_item {
+    margin-top: 11rem;
+  }
+
+  .mb-xs_item {
+    margin-bottom: 10rem;
   }
 }
 /* ----------- End Styling for Roadmap -------------- */
@@ -1010,6 +1035,12 @@ img {
 .team-item {
   border-radius: 4px;
   overflow: hidden;
+}
+.team-item-img {
+  border-radius: 4px;
+}
+.team-item-img img {
+  border-radius: 4px;
 }
 .team-item-content {
   padding: 1rem 0;
@@ -1133,13 +1164,20 @@ img {
 }
 
 .footer-policy {
-  margin-top: -1.4rem;
   width: 34%;
 }
 
 .footer-logo {
-  display: block;
-  width: 150px;
+  display: inline-block;
+  width: 170px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .footer-title {
