@@ -57,11 +57,16 @@ li {
 img {
   max-width: 100%;
 }
+
+h3 {
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
 .inner {
   max-width: 1200px;
-  width: 80%;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 .text-center {
   text-align: center;
@@ -119,11 +124,19 @@ img {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
+  h3 {
+    font-size: 2.4rem;
+  }
 }
 
 @media (max-width: 575.98px) {
   .btn {
     padding: 0.7rem 2rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
   }
 }
 
@@ -194,7 +207,18 @@ img {
 }
 .discoud-btn {
   background-color: #8c9fff;
-  margin-left: 1rem;
+}
+
+.instagram-btn {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
 }
 .btn-icon {
   margin-bottom: -2px;
@@ -313,6 +337,181 @@ img {
 }
 
 /* ----------- End Styling for Header -------------- */
+
+/* Overlay */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal {
+  position: relative;
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 2rem 2rem 2rem;
+  box-shadow: 0 0 15px rgba(#000, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  max-width: 60rem;
+  width: 80%;
+  border-radius: 8px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  animation: appear 1s ease-out forwards;
+  z-index: 120;
+}
+
+.modal-header {
+  padding-bottom: 2.5rem;
+}
+
+.modal-content {
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgb(255, 255, 255);
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 2.5rem;
+}
+.modal-btn,
+#presale-btn {
+  border: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+#join-discord-btn {
+  margin-left: 1.5rem;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* End Overlay */
+
+/* ----------- Start Styling for Partners -------------- */
+.partners {
+  background-image: linear-gradient(to right bottom, #073677, #103569);
+  padding: 7rem 0;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper .video {
+  max-width: 59%;
+  width: 100%;
+  height: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.partners-wrapper {
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.partners-card-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.partners-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to top right,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  width: 300px;
+  min-height: 136px;
+  padding: 1rem;
+  margin: 1rem;
+  box-shadow: 0 0 15px rgba(#000, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+.partners-card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners-card-content img {
+  max-width: 100%;
+  width: 80%;
+  height: auto;
+}
+
+.partners-card-ifaw img {
+  width: 60%;
+}
+
+.partners-card-wap img {
+  width: 44%;
+}
+
+@media (max-width: 1199.98px) {
+  .video-wrapper .video {
+    max-width: 70%;
+  }
+
+  .partners-card {
+    min-height: 170px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .video-wrapper .video {
+    max-width: 100%;
+    height: 300px;
+  }
+
+  .partners-card {
+    width: 240px;
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 440.98px) {
+  .video-wrapper .video {
+    max-width: 100%;
+    height: 260px;
+  }
+}
+/* ----------- End Styling for Partners -------------- */
 
 /* ----------- Start Styling for Series Section -------------- */
 .series {
@@ -475,6 +674,13 @@ img {
   font-size: 2rem;
   font-weight: 500;
   margin-top: -2rem;
+  margin-bottom: 10px;
+}
+.series-card-title {
+  margin-top: auto;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4rem;
 }
 .series-slider {
   position: absolute;
@@ -630,7 +836,7 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   grid-template-rows: auto;
 
-  padding-top: 16rem;
+  padding-top: 14rem;
 }
 
 .minting-item {
@@ -661,19 +867,19 @@ img {
 }
 
 .doneorca-item img {
-  max-width: 100%;
-  width: 20rem;
-  margin-top: -14.5rem;
+  max-width: 28.5rem;
+  width: 100%;
+  margin-top: -15.4rem;
 }
 .minting-item-title {
-  font-size: 4.2rem;
+  font-size: 4rem;
   font-weight: 600;
   margin: 1rem 0 0 0;
 }
 
 .minting-sub-title {
   font-family: serif;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   margin: 0 0 1.6rem 0;
 }
 
@@ -682,12 +888,20 @@ img {
 }
 
 .mint-list-item {
+  font-family: Nunito, sans-serif;
   font-size: 1.6rem;
+  font-weight: 500;
   line-height: 1.1;
   margin-bottom: 1.2rem;
 }
 .mint-list-item:last-child {
   margin-bottom: 0;
+}
+@media (max-width: 1199.98px) {
+  .doneorca-item img {
+    width: 83%;
+    margin-top: -15.2rem;
+  }
 }
 
 @media (max-width: 991.98px) {
@@ -695,12 +909,22 @@ img {
     width: 20rem;
     margin-top: -14rem;
   }
+
+  .doneorca-item img {
+    width: 21rem;
+    margin-top: -16.5rem;
+  }
 }
 
 @media (max-width: 767.98px) {
   .minting-item img {
     width: 16rem;
     margin-top: -11rem;
+  }
+
+  .doneorca-item img {
+    width: 17.2rem;
+    margin-top: -13.6rem;
   }
 
   .minting-item-title {
@@ -722,7 +946,7 @@ img {
 .ag-format-container {
   position: relative;
   padding: 7rem 0;
-  overflow: hidden;
+  height: auto;
 }
 
 .ag-timeline_item {
@@ -789,6 +1013,7 @@ img {
   align-items: center;
   width: 36px;
   height: 36px;
+  padding: 2px;
   line-height: 1.5;
   background-color: #f0fffb;
   text-align: center;
@@ -818,7 +1043,7 @@ img {
 .ag-timeline-card_item {
   display: inline-block;
   width: 45%;
-  margin: -8rem 0 0;
+  margin: -8rem 0 0 0;
   background: linear-gradient(
     to top right,
     rgba(255, 255, 255, 0.1),
@@ -873,6 +1098,10 @@ img {
   transform: translateX(0);
 }
 
+.ag-move-top {
+  transform: translateX(0) translateY(-43px) !important;
+}
+
 .ag-timeline-card_arrow {
   clip-path: polygon(50% 29%, 0% 100%, 100% 100%);
   height: 22px;
@@ -901,6 +1130,10 @@ img {
   transform: rotate(-90deg);
 }
 
+.ag-pb-0 {
+  padding-bottom: 0;
+}
+
 .ag-timeline-card_info {
   padding: 1rem;
 }
@@ -921,7 +1154,17 @@ img {
   text-align: left;
 }
 
+.ag-timeline-item.hidden {
+  line-height: 2;
+  visibility: hidden;
+  opacity: 0;
+}
+
 @media (max-width: 991.98px) {
+  .ag-timeline_list {
+    padding-right: 2rem;
+  }
+
   .ag-timeline_line {
     left: 30px;
   }
@@ -970,6 +1213,10 @@ img {
     right: auto;
     left: 0;
   }
+
+  .ag-move-top {
+    transform: translateX(0) translateY(-36px) !important;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -983,6 +1230,9 @@ img {
 }
 
 @media (max-width: 639px) {
+  .ag-timeline_list {
+    padding-right: 1rem;
+  }
   .ag-timeline-card_info {
     padding: 10px 15px;
   }
@@ -992,12 +1242,8 @@ img {
 }
 
 @media (max-width: 409.98px) {
-  .mt-sm_item {
-    margin-top: 11rem;
-  }
-
-  .mb-xs_item {
-    margin-bottom: 10rem;
+  .ag-timeline-card_item {
+    padding: 1rem;
   }
 }
 /* ----------- End Styling for Roadmap -------------- */
@@ -1232,25 +1478,23 @@ img {
 }
 
 .seen-on {
-  margin-top: 1rem;
-}
-.seen-on-link {
   display: flex;
   align-items: center;
-  font-size: 1.8rem;
-  color: #d6d6d6;
-  transition: all 0.3s;
-}
-.seen-on-link:hover {
-  color: #fff;
 }
 
-.seen-on-span {
+.seen-on-link {
+  display: block;
+  margin-top: 1rem;
+}
+
+.seen-on-span-title {
+  font-size: 1.8rem;
+  color: #d6d6d6;
   margin-right: 2rem;
 }
 
 .seen-on-img {
-  width: 100px;
+  width: 10rem;
   height: auto;
   margin-left: 2rem;
 }
@@ -1292,10 +1536,20 @@ img {
   .follow-us {
     text-align: center;
   }
+
   .seen-on {
-    margin: 2rem 0;
+    justify-content: center;
+  }
+  .seen-on-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  .seen-on-link {
+    margin: 0;
+  }
+  .seen-on-img {
+    margin-left: 1rem;
   }
 }
 /* ----------- End Styling for Footer -------------- */
